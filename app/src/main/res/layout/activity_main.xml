@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/main_activity__input__name_subscriber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Introduzca nombre de Subcriptor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/main_activity__input__email_subscriber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Introduzca email de Subcriptor"
+        app:layout_constraintEnd_toEndOf="@id/main_activity__input__name_subscriber"
+        app:layout_constraintStart_toStartOf="@id/main_activity__input__name_subscriber"
+        app:layout_constraintTop_toBottomOf="@id/main_activity__input__name_subscriber" />
+
+    <Button
+        android:id="@+id/main_activity__btn__save_subscriber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="@id/main_activity__input__email_subscriber"
+        app:layout_constraintTop_toBottomOf="@id/main_activity__input__email_subscriber" />
+
+    <Button
+        android:id="@+id/main_activity__btn__delete_subscriber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@android:color/darker_gray"
+        app:layout_constraintStart_toEndOf="@id/main_activity__btn__save_subscriber"
+        app:layout_constraintTop_toTopOf="@id/main_activity__btn__save_subscriber" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/main_activity__list__subscriber"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_activity__btn__save_subscriber"
+        tools:listitem="@layout/row_subscribe" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
